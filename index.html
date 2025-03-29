@@ -147,6 +147,20 @@
         .secure-btn:hover {
             background: #107d29;
         }
+        .dashboard-btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dashboard-btn:hover {
+            background: #0056b3;
+        }
+
 
         /* PDF Viewer Container */
         .pdf-container {
@@ -211,6 +225,7 @@
     </div>
 
     <button class="secure-btn" onclick="checkPassword()">View ID & Password File</button>
+    <button class="dashboard-btn" onclick="openDashboard()">PMS Portal Dashboard</button>
 
      <div class="container">
         <div class="module">
@@ -269,6 +284,10 @@
         function closePdf() {
             document.getElementById("pdfContainer").style.display = "none";
         }
+        function openDashboard() {
+            window.open("https://public.tableau.com/views/ALLProjects/Dashboard1", '_blank');
+        }
+        
     </script>
 
 </body>
